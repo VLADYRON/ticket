@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram version="1.0" type="MySQL" versionMajor="5" versionMinor="0" groupSchema="false">
+<Table id="0" name="persona" schema="" database="">
+<Column id="1" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="2" name="paterno" type="text" length="25" nulls="true"/>
+<Column id="3" name="materno" type="text" length="25" nulls="true"/>
+<Column id="4" name="nombres" type="text" length="25" nulls="true"/>
+<Column id="5" name="sexo" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">NO</CP>
+</Column>
+<Column id="6" name="tipo_documento" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="7" name="nro_documento" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="8" name="tipo_documento" schema="" database="">
+<Column id="9" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="10" name="codigo" type="varchar" length="25" nulls="true"/>
+<Column id="11" name="nombre" type="text" length="25" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="12" name="medio_comunicacion" schema="" database="">
+<Column id="13" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="14" name="id_persona" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="15" name="principal" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="16" name="valor" type="text" length="25" nulls="true"/>
+<Column id="17" name="tipo" type="varchar" length="25" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="18" name="adjunto" schema="" database="">
+<Column id="19" name="id" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="20" name="descripcion" type="text" length="25" nulls="true"/>
+<Column id="21" name="instancia" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="22" name="contenido" type="text" length="25" nulls="true"/>
+<Column id="23" name="tamano" type="varchar" length="200" nulls="true"/>
+<Column id="24" name="tipo" type="varchar" length="20" nulls="true"/>
+<Column id="25" name="nombre" type="text" length="25" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="26" name="area" schema="" database="">
+<Column id="27" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="28" name="descripcion" type="text" length="25" nulls="true"/>
+<Column id="29" name="estado" type="varchar" length="25" nulls="true"/>
+<Column id="30" name="id_area" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="31" name="usuario" schema="" database="">
+<Column id="32" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="33" name="codigo" type="varchar" length="200" nulls="true"/>
+<Column id="34" name="id_persona" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="35" name="email" type="varchar" length="200" nulls="true"/>
+<Column id="36" name="password" type="varchar" length="200" nulls="true"/>
+<Column id="37" name="fecha_creacion" type="datetime" length="25" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="38" name="perfil" schema="" database="">
+<Column id="39" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="40" name="descripcion" type="text" length="25" nulls="true"/>
+<Column id="41" name="codigo" type="varchar" length="200" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="42" name="perfil_usuario" schema="" database="">
+<Column id="43" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="44" name="id_perfil" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="45" name="id_usuario" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="46" name="estado" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="47" name="area_usuario" schema="" database="">
+<Column id="48" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="49" name="id_area" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="50" name="id_usuario" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="51" name="estado" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="52" name="ticket" schema="" database="">
+<Column id="53" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="54" name="id_area" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="55" name="id_stakeholder" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="56" name="codigo" type="varchar" length="25" nulls="true"/>
+<Column id="57" name="estado" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">NO</CP>
+</Column>
+<Column id="58" name="prioridad" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="59" name="id_staff" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="60" name="creado" type="datetime" length="25" nulls="true"/>
+<Column id="61" name="actualizado" type="datetime" length="25" nulls="true"/>
+<Column id="62" name="id_consulta" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="63" name="conformidad" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="64" name="tiempo_respuesta" type="float" length="25" nulls="true"/>
+<Column id="65" name="notificacion" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="66" name="resuelto" type="datetime" length="25" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="67" name="log_ticket" schema="" database="">
+<Column id="68" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="69" name="id_ticket" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="70" name="creado" type="datetime" length="25" nulls="true"/>
+<Column id="71" name="verificado" type="datetime" length="25" nulls="true"/>
+<Column id="72" name="accion" type="text" length="25" nulls="true"/>
+<Column id="73" name="id_usuario" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="74" name="codigo" type="varchar" length="200" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="75" name="general" schema="" database="">
+<Column id="76" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="77" name="file_root" type="varchar" length="250" nulls="true"/>
+<Column id="78" name="base_url" type="varchar" length="250" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="79" name="mensaje" schema="" database="">
+<Column id="80" name="id" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="81" name="id_ticket" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="82" name="descripcion" type="text" length="25" nulls="true"/>
+<Column id="83" name="creado" type="datetime" length="25" nulls="true"/>
+<Column id="84" name="id_staff" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="85" name="tipo" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="86" name="consulta" schema="" database="">
+<Column id="87" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="88" name="descripcion" type="text" length="25" nulls="true"/>
+<Column id="89" name="estado" type="int" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">NO</CP>
+</Column>
+<Column id="90" name="id_area" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Column id="91" name="resumen" type="text" length="25" nulls="true"/>
+<Column id="92" name="id_categoria" type="bigint" length="25" nulls="true">
+<CP name="PRECISION">15</CP>
+</Column>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Table id="93" name="categoria" schema="" database="">
+<Column id="94" name="id" type="bigint" length="25" nulls="false">
+<CP name="PRECISION">15</CP>
+<CP name="IDENTITY">YES</CP>
+</Column>
+<Column id="95" name="nombre" type="text" length="25" nulls="true"/>
+<Storage name="Charset" value=""/>
+<Storage name="Collation" value=""/>
+<Storage name="Engine" value=""/>
+</Table>
+<Relation id="96" name="REL_1" cardinality="-2" identifying="true" nulls="false">
+<FK>9</FK>
+<PK>6</PK>
+<Text/>
+</Relation>
+<Relation id="97" name="REL_2" cardinality="-2" identifying="true" nulls="false">
+<FK>1</FK>
+<PK>34</PK>
+<Text/>
+</Relation>
+<Relation id="98" name="REL_3" cardinality="-2" identifying="true" nulls="false">
+<FK>39</FK>
+<PK>44</PK>
+<Text/>
+</Relation>
+<Relation id="99" name="REL_4" cardinality="-2" identifying="true" nulls="false">
+<FK>32</FK>
+<PK>45</PK>
+<Text/>
+</Relation>
+<Relation id="100" name="REL_5" cardinality="-2" identifying="true" nulls="false">
+<FK>32</FK>
+<PK>50</PK>
+<Text/>
+</Relation>
+<Relation id="101" name="REL_6" cardinality="-2" identifying="true" nulls="false">
+<FK>27</FK>
+<PK>49</PK>
+<Text/>
+</Relation>
+<Relation id="102" name="REL_7" cardinality="-2" identifying="true" nulls="false">
+<FK>1</FK>
+<PK>14</PK>
+<Text/>
+</Relation>
+<Relation id="103" name="REL_8" cardinality="-2" identifying="true" nulls="false">
+<FK>32</FK>
+<PK>59</PK>
+<Text/>
+</Relation>
+<Relation id="104" name="REL_9" cardinality="-2" identifying="true" nulls="false">
+<FK>32</FK>
+<PK>55</PK>
+<Text/>
+</Relation>
+<Relation id="105" name="REL_10" cardinality="-2" identifying="true" nulls="false">
+<FK>27</FK>
+<PK>54</PK>
+<Text/>
+</Relation>
+<Relation id="106" name="REL_11" cardinality="-2" identifying="true" nulls="false">
+<FK>87</FK>
+<PK>62</PK>
+<Text/>
+</Relation>
+<Relation id="107" name="REL_12" cardinality="-2" identifying="true" nulls="false">
+<FK>94</FK>
+<PK>92</PK>
+<Text/>
+</Relation>
+<Relation id="108" name="REL_13" cardinality="-2" identifying="true" nulls="false">
+<FK>27</FK>
+<PK>90</PK>
+<Text/>
+</Relation>
+<Relation id="109" name="REL_14" cardinality="-2" identifying="true" nulls="false">
+<FK>53</FK>
+<PK>81</PK>
+<Text/>
+</Relation>
+<Relation id="110" name="REL_15" cardinality="-2" identifying="true" nulls="false">
+<FK>32</FK>
+<PK>84</PK>
+<Text/>
+</Relation>
+<Constraint table="0" name="PK_persona_1" type="PrimKey">
+<ConstraintColumn id="1"/>
+</Constraint>
+<Constraint table="8" name="PK_tipo_documento_1" type="PrimKey">
+<ConstraintColumn id="9"/>
+</Constraint>
+<Constraint table="12" name="PK_medio_comunicacion_1" type="PrimKey">
+<ConstraintColumn id="13"/>
+</Constraint>
+<Constraint table="18" name="PK_adjunto_1" type="PrimKey">
+<ConstraintColumn id="19"/>
+</Constraint>
+<Constraint table="26" name="PK_area_1" type="PrimKey">
+<ConstraintColumn id="27"/>
+</Constraint>
+<Constraint table="31" name="PK_usuario_1" type="PrimKey">
+<ConstraintColumn id="32"/>
+</Constraint>
+<Constraint table="38" name="PK_perfil_1" type="PrimKey">
+<ConstraintColumn id="39"/>
+</Constraint>
+<Constraint table="42" name="PK_perfil_usuario_1" type="PrimKey">
+<ConstraintColumn id="43"/>
+</Constraint>
+<Constraint table="47" name="PK_area_usuario_1" type="PrimKey">
+<ConstraintColumn id="48"/>
+</Constraint>
+<Constraint table="52" name="PK_ticket_1" type="PrimKey">
+<ConstraintColumn id="53"/>
+</Constraint>
+<Constraint table="67" name="PK_log_ticket_1" type="PrimKey">
+<ConstraintColumn id="68"/>
+</Constraint>
+<Constraint table="75" name="PK_general_1" type="PrimKey">
+<ConstraintColumn id="76"/>
+</Constraint>
+<Constraint table="79" name="PK_mensaje_1" type="PrimKey">
+<ConstraintColumn id="80"/>
+</Constraint>
+<Constraint table="86" name="PK_consulta_1" type="PrimKey">
+<ConstraintColumn id="87"/>
+</Constraint>
+<Constraint table="93" name="PK_categoria_1" type="PrimKey">
+<ConstraintColumn id="94"/>
+</Constraint>
+<Sheet name="Sin título 1" id="111" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+<Place id="42" visible="true">458,280,120,141</Place>
+<Place id="104" visible="true" options="230.21652095504624,320.2165209550463,181.0,141.0,470.5829609536288,568.6785498916919,262.0,321.0,7,290.0,461.0,290.0,510.0,370.0,510.0,370.0,610.0,410.0,610.0,410.0,640.0,470.0,640.0">500,0,0,0</Place>
+<Place id="98" visible="true">500,0,0,0</Place>
+<Place id="18" visible="true">70,461,141,161</Place>
+<Place id="102" visible="true">500,0,0,0</Place>
+<Place id="105" visible="true">500,0,0,0</Place>
+<Place id="31" visible="true">230,320,181,141</Place>
+<Place id="47" visible="true">620,320,120,141</Place>
+<Place id="26" visible="true">610,80,191,171</Place>
+<Place id="106" visible="true">500,0,0,0</Place>
+<Place id="8" visible="true">70,20,120,91</Place>
+<Place id="97" visible="true">500,0,0,0</Place>
+<Place id="75" visible="true">930,60,171,151</Place>
+<Place id="12" visible="true">30,250,131,111</Place>
+<Place id="79" visible="true">940,559,271,282</Place>
+<Place id="86" visible="true">1019,320,132,160</Place>
+<Place id="99" visible="true">500,0,0,0</Place>
+<Place id="109" visible="true">500,0,0,0</Place>
+<Place id="110" visible="true">500,0,0,0</Place>
+<Place id="96" visible="true">500,0,0,0</Place>
+<Place id="52" visible="true">470,568,262,321</Place>
+<Place id="67" visible="true">810,279,161,160</Place>
+<Place id="38" visible="true">380,120,161,101</Place>
+<Place id="101" visible="true">500,0,0,0</Place>
+<Place id="107" visible="true">500,0,0,0</Place>
+<Place id="108" visible="true">500,0,0,0</Place>
+<Place id="93" visible="true">1210,430,120,60</Place>
+<Place id="0" visible="true">200,130,131,151</Place>
+<Place id="100" visible="true" options="230.21652095504624,320.2165209550463,181.0,141.0,620.4330419100925,320.2165209550463,120.0,141.0,2,411.0,460.0,621.0,460.0">524,0,0,0</Place>
+<Place id="103" visible="true">500,0,0,0</Place>
+</Sheet>
+<Settings sheet="111" zoom="0.707106781186548"/>
+</Diagram>
