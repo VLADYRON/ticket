@@ -1,6 +1,0 @@
-pe\catalyst\ticket\dao\PersonaDAOH.class
-pe\catalyst\ticket\model\Persona.class
-pe\Application.class
-pe\catalyst\ticket\config\controller\GreetingController.class
-pe\catalyst\ticket\config\DatabaseConfig.class
-pe\catalyst\ticket\dao\PersonaDAO.class

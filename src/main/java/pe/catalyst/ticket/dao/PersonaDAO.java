@@ -12,4 +12,6 @@ public interface PersonaDAO {
    
     public List<Persona> getAll();
 
+    public List<Persona> search(String nombre);
+
 }

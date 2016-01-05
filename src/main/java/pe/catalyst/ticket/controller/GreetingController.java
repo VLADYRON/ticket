@@ -1,8 +1,9 @@
-package pe.catalyst.ticket.config.controller;
+package pe.catalyst.ticket.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pe.catalyst.ticket.dao.PersonaDAO;
@@ -22,6 +23,12 @@ public class GreetingController {
     @RequestMapping("/hola")
     public String hola(Model model) {
         model.addAttribute("personas", _persona.getAll());
+        return "hola";
+    }
+
+    @RequestMapping("/search/{nombre}")
+    public String search(Model model, @PathVariable("nombre") String nombre) {
+        model.addAttribute("personas", _persona.search(nombre));
         return "hola";
     }
 
